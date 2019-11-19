@@ -145,6 +145,7 @@ void requestRecieved() {
     lcd.print("Device Stopped");
 //    timeLoop(millis(), 2000);
     delay(2000);
+    lcd.clear();
     lcd.print("Waiting for");
     lcd.setCursor(0, 1);
     lcd.print("response");
