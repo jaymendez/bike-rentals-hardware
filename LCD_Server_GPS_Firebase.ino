@@ -275,7 +275,9 @@ void getGps() {
      }
     }
   }
-  sendIP();
+  if (!isTimerReady) {
+    sendIP();
+  }
 }
 
 void sendIP() {
