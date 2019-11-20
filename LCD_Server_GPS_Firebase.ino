@@ -41,6 +41,7 @@ String gv_lat_str,
        gv_lng_str;
 int H, M, S;
 int isTimerReady = 0;
+int isIP = 0;
 int period = 1000;
 unsigned long time_now = 0;
 
@@ -282,10 +283,15 @@ void getGps() {
 }
 
 void sendIP() {
-  Firebase.setString("/bike1/localIP", WiFi.localIP().toString() );
-  if (Firebase.failed()) {
-    Serial.print("IP Failed to Push:");
-    Serial.println(Firebase.error());
-    return;
+  if (!isIP) {
+    Firebase.setString("/bike1/localIP", WiFi.localIP().toString() );
+    if (Firebase.failed()) {
+      Serial.print("IP Failed to Push:");
+      Serial.println(Firebase.error());
+      return;
+    } else {
+      Serial.println("IP SENT");
+      isIP = 1;
+    }
   }
 }
