@@ -150,7 +150,54 @@ void requestRecieved() {
     lcd.print("Waiting for");
     lcd.setCursor(0, 1);
     lcd.print("response");
-  }
+  } else if (msg == "outside_geofence") {
+//    Outside Geofence
+    lcd.clear();
+    lcd.setCursor(1, 0);
+    lcd.print("Outside");
+    lcd.print("Geofence");
+    lcd.setCursor(1, 1);
+  } else if (msg2 == "overtime") {
+//    Overtime
+    lcd.clear();
+    lcd.print ("  Overtime  ");
+    lcd.setCursor(7, 1);
+    lcd.print(":");
+    lcd.setCursor(5, 1);
+    if (H > 9) {
+      lcd.print(H);
+    } else {
+      lcd.print("0");
+      lcd.print(H);
+    }
+    lcd.setCursor(8, 1);
+    if (M > 9) {
+      lcd.print(M);
+    } else {
+      lcd.print("0");
+      lcd.print(M);
+    }
+  } else if (msg == "time_left") {
+//    Time Left
+    lcd.clear();
+    lcd.print ("  Time Left  ");
+    lcd.setCursor(7, 1);
+    lcd.print(":");
+    lcd.setCursor(5, 1);
+    if (H > 9) {
+      lcd.print(H);
+    } else {
+      lcd.print("0");
+      lcd.print(H);
+    }
+    lcd.setCursor(8, 1);
+    if (M > 9) {
+      lcd.print(M);
+    } else {
+      lcd.print("0");
+      lcd.print(M);
+    }
+  } 
   
 //  sendFirebaseMsg(msg1, msg2);
 
