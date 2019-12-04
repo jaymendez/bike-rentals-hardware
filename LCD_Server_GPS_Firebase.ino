@@ -179,7 +179,7 @@ void requestRecieved() {
       lcd.print("0");
       lcd.print(M);
     }
-  } else if (msg == "time_left") {
+  } else if (msg2 == "time_left") {
 //    Time Left
     lcd.clear();
     lcd.print ("  Time Left  ");
