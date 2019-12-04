@@ -138,7 +138,9 @@ void requestRecieved() {
   server.send(204, "success");
   Serial.println(msg2);
   if (msg2 == "start") {
-    isTimerReady = 1;
+//    isTimerReady = 1;
+    lcd.clear();
+    lcd.print("Device Start");
   } else if (msg2 == "stop") {
     isTimerReady = 0;
     Serial.println("STOP");
@@ -150,7 +152,7 @@ void requestRecieved() {
     lcd.print("Waiting for");
     lcd.setCursor(0, 1);
     lcd.print("response");
-  } else if (msg == "outside_geofence") {
+  } else if (msg2 == "outside_geofence") {
 //    Outside Geofence
     lcd.clear();
     lcd.setCursor(1, 0);
