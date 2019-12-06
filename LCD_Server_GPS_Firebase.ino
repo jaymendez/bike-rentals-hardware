@@ -199,6 +199,43 @@ void requestRecieved() {
     lcd.print("Outside");
     lcd.print("Geofence");
     lcd.setCursor(1, 1);
+    timeLoop(millis(), 500);
+
+    lcd.clear();
+    timeLoop(millis(), 250);
+
+    lcd.setCursor(1, 0);
+    lcd.print("Outside");
+    lcd.print("Geofence");
+    lcd.setCursor(1, 1);
+    timeLoop(millis(), 500);
+
+    lcd.clear();
+    timeLoop(millis(), 250);
+
+    lcd.setCursor(1, 0);
+    lcd.print("Outside");
+    lcd.print("Geofence");
+    lcd.setCursor(1, 1);
+    timeLoop(millis(), 500);
+
+    lcd.clear();
+    timeLoop(millis(), 250);
+
+    lcd.setCursor(1, 0);
+    lcd.print("Outside");
+    lcd.print("Geofence");
+    lcd.setCursor(1, 1);
+    timeLoop(millis(), 500);
+
+    lcd.clear();
+    timeLoop(millis(), 250);
+
+    lcd.setCursor(1, 0);
+    lcd.print("Outside");
+    lcd.print("Geofence");
+    lcd.setCursor(1, 1);
+    timeLoop(millis(), 500);
   } 
   
 //  sendFirebaseMsg(msg1, msg2);
